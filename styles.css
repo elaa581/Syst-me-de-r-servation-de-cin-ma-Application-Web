@@ -1,0 +1,531 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* styles.css */
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth ;
+  scroll-padding-top: 9px;
+}
+body {
+  background-color: #2c2727;
+  color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal;
+  
+}
+header{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent), url(images/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  
+}
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Couche sombre semi-transparente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+header {
+    height: 100%;;
+    width: 100%;
+    border: 1px solid #fff ;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px -8px #000 ; 
+    z-index: 1000;
+}
+#home{
+  padding-left: 50px;
+  text-align:start;
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+#Affiche{
+  font-size: xx-large;
+  color: #ffffff;
+}
+h2{
+  font-size: xx-large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#home p{
+  font-size: x-large;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.but_reservtion{
+  color: #ffffff;
+  font-size: 14px;
+  border: 2px solid #df3636;
+  padding: 5px 20px;
+  transition: 0.5s;
+  font-weight: bolder;
+}
+.but_reservtion:hover{
+  background-color: #bf0a0a;
+  color: floralwhite;
+  font-weight: bold;
+}
+
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie {
+  width: 150px; /* Largeur de chaque film */
+  text-align: center;
+}
+.movie img{
+  width: 100%;
+  height: auto; /* Maintient le ratio de l'image */
+  border-radius: 10px; /* Coins arrondis pour un look moderne */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.movie:hover {
+  transform: scale(1.05); /* Zoom au survol */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15); /* Ombre au survol */
+}
+.movie-poster {
+  width: 50%;
+  height: 100%px;
+  border-bottom: 2px solid #f0f0f0; /* Séparation entre l'image et le texte */
+}
+.movie-title {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000000;
+}
+/* Styles for the navigation bar */
+
+  
+  .navbar {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3e9e92e; /* Couleur de fond */
+    padding: 10px 20px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    border: #ccc,solid;
+    gap: 25px;
+  }
+  .navbar-logo img {
+  width: 50px;
+  height: auto;
+  filter: invert(1); 
+}
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+  .navbar-menu li {
+    margin: 0 15px;
+  }
+  .navbar-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  .navbar-menu a:hover {
+    color: #000000; 
+  }
+  .navbar :hover{
+    background-color: transparent;
+  }
+  .search{
+    display: flex;
+    width: 97%;
+    margin: 30px;
+    box-shadow: #ccc;
+  }
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  }
+  .account {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-right: 15px;
+  }
+  .account:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .language button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .language span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .navbar-profil profil{
+    margin-left: auto;
+    align-items: center;
+    gap: 5px;
+  }
+  .modal {
+    display: none;
+      position: fixed; /* Positionner le modal par rapport à la fenêtre */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.638); /* Fond sombre avec opacité */
+      z-index: 1; /* Assurez-vous que le modal soit au-dessus du contenu */
+   }
+   
+    /* Contenu du modal (formulaire) */
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      margin-top: 5%;
+      padding: 30px;
+      border-radius: 8px;
+      width: 40%; /* Largeur du modal */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35); /* Ombre légère */
+      font-family: Arial, sans-serif;
+    }
+  
+    /* La croix pour fermer le modal */
+    .close {
+      color: #aaa;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+    }
+  
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    /* Titre du formulaire */
+    .modal-content h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  
+    /* Formulaire */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    /* Labels */
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    /* Champs de saisie */
+    input[type="text"], input[type="email"], input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+  
+    /* Bouton d'inscription */
+    button[type="submit"] {
+      padding: 12px;
+      font-size: 18px;
+      background-color: #7e0505; /* Couleur verte */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    button[type="submit"]:hover {
+      background-color: #05005c; /* Couleur plus foncée au survol */
+    }
+  
+    /* Bouton d'annulation ou fermeture */
+    .cancel-btn {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #f44336; /* Rouge pour annuler */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .cancel-btn:hover {
+      background-color: #da190b; /* Couleur plus foncée au survol */
+    }
+    .login-text{
+      color: #000;
+      font-size: 15px;
+    }
+ /* Style général pour la navbar */
+.navbar-profil {
+  position: relative;
+}
+
+.navbar-profil a.compte img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Style pour la fenêtre modale */
+.profil {
+  display: none; /* Caché par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  z-index: 1000; /* Au-dessus des autres éléments */
+  justify-content: center;
+  align-items: center;
+}
+
+.profil-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px; /* Taille du formulaire */
+  text-align: center;
+}
+
+.profil-content h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Image du logo */
+.profil-content img#logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  
+
+}
+
+/* Style des labels */
+.profil-content label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+/* Style des champs de saisie */
+.profil-content input[type="email"],
+.profil-content input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Bouton de connexion */
+.profil-content .submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #b31919; /* Couleur verte */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profil-content .submit-button:hover {
+  background-color: #000e6c;
+}
+
+/* Texte de connexion */
+.profil-content .login-text {
+  font-size: 12px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.profil-content .login-text a {
+  color: #000000; /* Lien bleu */
+  text-decoration: none;
+}
+
+.profil-content .login-text a:hover {
+  text-decoration: underline;
+}
+
+/* Bouton de fermeture */
+.profil-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profil-content .close:hover {
+  color: #FF0000; /* Rouge au survol */
+}
+
+
+
+
+
+
+
+  /*search */
+  #search{
+    width: 80%;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 10px;
+    border: #ccc, solid;
+    background: rgba(255, 255, 255, 0.229);
+  }
+ #img_serch{
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+ }
+ /* Footer Styling */
+ footer {
+  background-color: #181818;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+.social-media img {
+  text-align: center;
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  filter: invert(1); /* Make icons white */
+  
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  margin-top: 10px;
+}
+#image{
+  padding-top: 100%;
+  width: 120px;
+  height: auto;
+  filter: invert(1); /* Make icons white */
+
+}
+
+
+  
+  

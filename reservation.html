@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étoiles d'Argent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="navbar-logo">
+          <img src="images/movie-roll.png" alt="Logo CinéStar">
+        </div>
+    
+        <!-- Menu principal -->
+        <ul class="navbar-menu">
+          <li><a href="#">Films</a></li>
+          <li><a href="#">Cinémas</a></li>
+          <li><a href="#">Offres</a></li>
+        </ul>
+    
+        <!-- Actions à droite -->
+        <div class="navbar-actions">
+          <a href="#" class="account">Créer un compte</a>
+
+<!-- Modal pour le formulaire -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>Créer un compte</h2>
+    <form>
+      <label for="username">Nom d'utilisateur :</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit" class="submit-button">Continuer</button>
+      <p class="login-text">Vous avez un compte ? <a href="#">Connectez-vous</a></p>
+    </form>
+  </div>
+</div>
+
+
+<div class="navbar-profil">
+  <a href="#" class="compte"><img src="images/utilisateur.png" id="profil"></a>
+  <div class="profil" id="profil">
+    <div class="profil-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Me connecter</h2>
+      <img src="images/utilisateur.png" id="logo">
+      <form>
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit" class="submit-button">Connexion</button>
+        <p class="login-text">Vous n'avez pas de compte ? <a href="#">Mot de passe oublie?</a></p>
+      </form>
+    </div>
+  </div>
+      </nav>
+    
+    
+      <section id="home">
+      <div>
+        <h2>Étoiles d'Argent</h2>
+        <h4 id="Affiche">Bienvenue sur Étoiles d'Argent,</h4>
+      <p> Étoiles d'Argent, où chaque projection illumine vos rêves </br> et vous transporte au cœur de la magie du grand écran.  </p>
+      <a href="#" class="but_reservtion">Reserver Maintenant</a>
+    </div>
+      </section>
+      <div class="search">
+        <span> <img src="images/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png" id="img_serch"> </span>
+        <input type="text" id="search" placeholder="Recherchez votre film préféré...">
+    </div>
+  </header>
+  <main>
+    <h2>A l'affiche au cinema </h2>
+        <section id="movies"></section>
+    </main>
+  
+      
+  
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Les Nouveautés à l'Affiche</h3>
+          <ul id="movie-list">
+            <!-- Les films seront injectés ici par JavaScript -->
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>À PROPOS</h3>
+          <ul>
+            <li>Offres B2B</li>
+            <li>Projection scolaire</li>
+            <li>L'expérience Pathé</li>
+            <li>Pathé Live</li>
+            <li>Offre anniversaire</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>LIENS UTILES</h3>
+          <ul>
+            <li>Paramétrer vos cookies</li>
+            <li>Plan du site</li>
+            <li>Centre d'aide</li>
+            <li>Bien vivre votre séance</li>
+            <li>Espace recrutement</li>
+            <li>CGV</li>
+            <li>Politique CVD</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>VOUS AVEZ DES QUESTIONS ?</h3>
+          <ul>
+            <li>C'est quoi un film en Dolby Atmos ?</li>
+            <li>Comment fonctionne la carte 5 places ?</li>
+            <li>Prenez votre temps, votre fauteuil vous attend ?</li>
+            <img  src="images/movie-roll.png" id="image">
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <a href="#"><img src="images/facebook-app-symbol.png" alt="Facebook"></a>
+        <a href="#"><img src="images/instagram (1).png" alt="Instagram"></a>
+        <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+      </div>
+      <div class="footer-bottom">
+        <p>Les Cinémas Tunisie © 2025 – Tous droits réservés ®</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
+
